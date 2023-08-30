@@ -14,7 +14,7 @@ const fs = require('fs')
 
 //***************************** Non-blocking, asynchronous way *************************//
 //reading
-fs.readFile('./starter/txt/startMMM.txt', 'utf-8', (err, data) => {
+fs.readFile('./starter/txt/start.txt', 'utf-8', (err, data) => {
 
     if (err) return console.log('ERROR! 💥')
 
