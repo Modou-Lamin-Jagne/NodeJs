@@ -2,7 +2,7 @@ const fs = require('fs')
 
 //***************************** READING AND WRITING FILES *****************************//
 
-//********************* Blocking, synchronous code ******************************//
+//***************************** Blocking, synchronous code ******************************//
 //reading
 // const txtIn = fs.readFileSync('./starter/txt/input.txt', 'utf-8');
 // console.log(txtIn)
@@ -12,9 +12,12 @@ const fs = require('fs')
 // fs.writeFileSync('./starter/txt/output.txt', txtOut);
 // console.log("File written!")
 
-//******************** Non-blocking, asynchronous way *************************//
+//***************************** Non-blocking, asynchronous way *************************//
 //reading
-fs.readFile('./starter/txt/start.txt', 'utf-8', (err, data) => {
+fs.readFile('./starter/txt/startMMM.txt', 'utf-8', (err, data) => {
+
+    if (err) return console.log('ERROR! 💥')
+
     fs.readFile(`./starter/txt/${data}.txt`, 'utf-8', (err, data1) => {
         console.log(data1)
         fs.readFile(`./starter/txt/append.txt`, 'utf-8', (err, data2) => {
